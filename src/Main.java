@@ -15,24 +15,35 @@ public class Main {
             want = i % 2 == 0 ? "read" : "write";
             persons[i] = new Person(want, mutex, wrt, readCount, i);
         }
-        for(int i=0; i < 5; i++)
-        {
-           persons[i].start();
+        for(int i=0; i<5;i++){
+            persons[i].start();
         }
-//        while(true){
-//            for(int i=0; i < 5; i++)
-//            {
-//                System.out.print(persons[i].wrt.availablePermits() + " ");
-//            }
-//            System.out.println();
-//            for(int i=0; i < 5; i++)
-//            {
-//                System.out.print(persons[i].wrt.availablePermits() + " ");
-//            }
-//            System.out.println();
-//            System.out.println("-----------");
-//            sleep(2000);
-//        }
+        while(true){
+            for(int i = 0; i < 5; i++)
+            {
+                System.out.println(persons[i].pNumber + " want to " + persons[i].wantTo + ", now " + persons[i].status);
+            }
+            System.out.println("------------");
+            sleep(2000);
+
+        }
+        /*
+        manr dua[];
+        nha triet hoc co: left, right, pNumer
+        * */
+        /*
+            wait left
+            wait right
+
+            // cs
+            eat
+
+            signal left;
+            signal right;
+
+            thinking
+
+        */
     }
 
 
